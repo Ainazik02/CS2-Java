@@ -1,0 +1,103 @@
+EX 3.4 What output is produced by the following code fragment?
+String m1, m2, m3;
+m1 = "Quest for the Holy Grail";
+m2 = m1.toLowerCase();
+m3 = m1 + " " + m2;
+System.out.println (m3.replace('h', 'z'));
+
+Answer 3.4)
+Output will be: Quest for tze Holy Grail quest for tze zoly grail
+Explanation is below👇
+public class Try {
+    public static void main(String[] args) {
+        String m1, m2, m3;
+        m1 = "Quest for the Holy Grail"; //Given original string
+        m2 = m1.toLowerCase(); // Lowering all the character by creating variable of original sting 
+        m3 = m1 + " " + m2; // The original string is concatenated with a lowercase version of itself
+        System.out.println (m3.replace('h', 'z')); //then all lowercase ‘h’ characters are replaced with ‘z’.
+
+
+    }
+}
+
+
+
+
+EX 3.6 Assuming that a Random object has been created called generator, what is the range of the result of each of the following expressions?
+a. generator.nextInt(20)
+b. generator.nextInt(8)+1
+c. generator.nextInt(45)+10
+d. generator.nextInt(100)-50
+
+Answer 3.6)
+A.from 0 to 19 included
+B.from 1 to 8 included
+C.from 10 to 54 included
+D.from -50 to 49 included
+
+
+
+
+EX 3.7 Write code to declare and instantiate an object of the Random class (call the object reference variable rand). Then write a list of expressions using the nextInt() method that generates random numbers in the following specified ranges, including the endpoints. 
+a. 0 to 10
+b. 0 to 500
+c. 1 to 10
+d. 1 to 500
+e. 25 to 50
+f. -10 to 15
+
+Answer 3.7)
+a. generator.nextInt(11)
+b. generator.nextInt(501)
+c. generator.nextInt(10)+1
+d. generator.nextInt(500)+1
+e. generator.nextInt(26)+25
+f. generator.nextInt(26)-108
+
+
+
+EX 3.8 Write an assignment statement that computes the square root of
+the sum of num1 and num2 and assigns the result to num3.
+
+Answer 3.8)
+Output will be: 5
+Single Statement: System.out.println (Math.sqrt(num1+num2));
+
+public class Try3 {
+    public static void main(String[] args) {
+        int num1 = 22;
+        int num2=3;
+        int num3= (int) Math.sqrt(num1+num2);
+
+        System.out.println(num3);
+    }
+}
+
+
+
+
+
+
+
+EX 3.9 Write a single statement that computes and prints the absolute
+value of total.
+
+Answer 3.9)
+Single Statement: System.out.println (Math.abs(total));
+
+
+import java.util.Scanner;
+public class Try4 {
+    public static void main(String[] args) {
+        System.out.print("Total value: ");
+        Scanner input = new Scanner(System.in);
+        double total = input.nextDouble();
+
+
+
+        System.out.println (Math.abs(total));
+        double amount = input.nextDouble();
+    }
+}
+
+
