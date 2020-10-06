@@ -1,0 +1,162 @@
+EX 5.2. What is wrong with the following code fragment? Rewrite it so that it produces a correct output.
+
+if (total == MAX)
+   if (total < sum)
+       System.out.println ("total == MAX and < sum.");
+else
+       System.out.println ("total is not equal to MAX");
+
+
+Answer 5.2) An unpredictable indentation makes an error in this code. To be precise, else scope is belong to inner if, whether outer if.  In my example I understand that it should belong to outer if. Because the code will not return anything until total and MAX are equal. But when it belongs to outer one and second if is in the scope of first if, it can return a word at least “total is not equal to MAX”. 
+
+class Main {
+  public static void main(String[] args) {
+    int total=20;//Giving an initial value to all variables 
+    int MAX=28;
+    int sum=50;
+    if (total== MAX)
+    {
+      if (total < sum)
+      System.out.println ("total == MAX and < sum.");
+    }   
+    else
+    System.out.println ("total is not equal to MAX");    
+  }
+}
+
+Output 5.2) total is not equal to MAX
+
+
+
+EX 5.3. What is wrong with the following code fragment? Will this code compile if it is part of an otherwise valid program? Explain.
+
+if (length = MIN_LENGTH)
+     System.out.println ("The length is minimal.");
+
+Answer 5.3) In this code “=“ sign is incorrect, because it is not assigning some value to an argument. In order to compare, in coding we use double equal sign (“==“). That’s why obviously  it won’t compile 
+
+
+EX 5.4. What output is produced by the following code fragment?
+
+int num = 87, max = 25;
+if (num >= max*2)
+      System.out.println ("apple");
+      System.out.println ("orange");
+      System.out.println ("pear");
+
+
+Answer 5.4)
+
+Output will be: apple  //in this case is printed because the statement is true (87>=50)
+                         orange  //this line is also printed because code is printing without any conditions, just simple 
+                         pear  //the same as second one
+
+
+
+
+
+EX 5.5. What output is produced by the following code fragment?
+
+int limit = 100, num1 = 15, num2 = 40;
+if (limit <= limit)
+   {
+     if (num1 == num2)
+        System.out.println ("lemon");
+        System.out.println ("lime");
+    }
+System.out.println ("grape");
+
+Answer 5.5)
+
+lime
+grape
+lemon is not produced is because the statement is incorrect (15 is not equal to 40)
+
+
+EX 5.7. What output is produced by the following code fragment?
+int num = 1, max = 20;
+while (num < max)
+         {
+         System.out.println (num);
+         num += 4;
+         }
+
+
+Answer 5.7)
+
+ //it starts with 1 and +4 is added to next number until num=19
+1
+5 
+9 
+13 
+17
+
+
+
+EX 5.8. What output is produced by the following code fragment? 
+int num = 1, max = 20;  
+while (num < max)
+ {    
+  if (num%2 == 0)
+  system.out.println (num);    num++; 
+ }
+
+Answer 5.8)
+
+//all even numbers are executed until 19, because when we divide into 2 we will not get any reminders)
+2 
+4 
+6
+ 8 
+10 
+12 
+14 
+16 
+18
+
+
+EX 5.9. What is wrong with the following code fragment? What can be a possible way to remove the flaw/error? 
+count = 50;
+while (count >= 0) 
+{    
+System.out.println (count);    
+count = count + 1;
+ }
+
+Answer 5.9)
+
+As we increment by one in every iteration, and statement is true it runs infinitely. My solutions:
+First)
+
+We can make -1, in order to have a limit from 50 to 0:
+
+count = 50;
+while (count >= 0) 
+{    
+System.out.println (count);    
+count = count -1;
+ }
+
+
+Second)
+
+
+Making a vise versa is also good option without changing the format of the conditions :
+
+count = 0;
+while (count <=50) 
+{    
+System.out.println (count);    
+count = count + 1;
+ }
+
+Third)
+
+It is also possible to change the while condition and set a limit:
+
+count = 50;
+while (count <250) 
+{    
+System.out.println (count);    
+count = count + 1;
+ }
