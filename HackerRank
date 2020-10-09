@@ -1,0 +1,54 @@
+Given an integer, , perform the following conditional actions:
+
+If n is odd, print Weird
+If n is even and in the inclusive range of 2 to 5, print Not Weird
+If n is even and in the inclusive range of 6 to 20, print Weird
+If n is even and greater than 20, print Not Weird
+Complete the stub code provided in your editor to print whether or not n is weird.
+
+
+Code:
+
+
+
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Solution {
+
+
+
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int N = scanner.nextInt();
+        String ans="";
+        if(N%2==1){
+         ans="Weird";
+        } 
+        else{
+            
+            if (2<=N && N<=5){
+                ans="Not Weird";
+        }       
+            else if (6<=N && N<=20){
+                ans="Weird";
+        }       
+            else if (20<N);{
+                ans="Not Weird";
+        }   
+
+        }  
+        
+        System.out.println(ans);
+
+    
+
+        scanner.close();
+    }
+}
