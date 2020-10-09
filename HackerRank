@@ -10,7 +10,6 @@ Complete the stub code provided in your editor to print whether or not n is weir
 Code:
 
 
-
 import java.io.*;
 import java.math.*;
 import java.security.*;
@@ -33,13 +32,13 @@ public class Solution {
         } 
         else{
             
-            if (2<=N && N<=5){
+            if (N>=2 && N<=5){
                 ans="Not Weird";
         }       
-            else if (6<=N && N<=20){
+            else if (N>=6 && N<=20){
                 ans="Weird";
         }       
-            else if (20<N);{
+            else{
                 ans="Not Weird";
         }   
 
